@@ -31,6 +31,10 @@ Route::get('/edit_news/{id}', 'NewsController@edit')->name('edit');
 Route::post('edit_news/update/{id}', 'NewsController@update')->name('update');
 Route::get('/Show_flowers_for_c', 'FlowerController@Show_flowers_for_c')->name('Show_flowers_for_c');
 Route::get('show_news_f_c', 'NewsController@show_news_f_c')->name('show_news_f_c');
+Route::get('priceinfo/{id}', 'FlowerController@priceinfo')->name('priceinfo');
+Route::post('comment/{id}', 'CommentController@create')->name('addcomment');
+//Route::get('/search', 'FlowerController@create')->name('addcomment');
+Route::post('search', 'FlowerController@search')->name('search');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

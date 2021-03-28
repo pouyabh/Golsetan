@@ -4,11 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
+use App\Models\Flower;
+
 class DefController extends Controller
 {
-    public function home()
+    public function home(Request $request)
     {
-        return view('home');
+        $search = $request->search;
+        $data = Flower::where('name', 'like', '%' . $search . '%')->latest()->get();
+        return view('home', compact('data'));
+
     }
 
     public function admin_profile()

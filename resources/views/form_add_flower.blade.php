@@ -13,13 +13,13 @@
                     </div>
                 @endif
                 @if(session('msg')!=null)
-                    {
+
                     <div class="alert alert-success" role="alert" style="text-align: center">
                         <h4>
                             {{session('msg')}}
                         </h4>
                     </div>
-                    }@endif
+                    @endif
             </div>
             <div class="col-md-4" style="text-align: center">
                 <form action="/save_flower" method="post" enctype="multipart/form-data">

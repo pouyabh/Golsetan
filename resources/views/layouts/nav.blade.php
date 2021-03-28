@@ -35,7 +35,7 @@
 <div id="header">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <!-- Brand -->
-        <a class="navbar-brand" href="#" style="font-family: fantasy">GolSetan</a>
+        <a class="navbar-brand" href="/" style="font-family: fantasy">GolSetan</a>
 
         <!-- Links -->
         <ul class="navbar-nav">
@@ -61,11 +61,11 @@
                 </div>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" style="margin-left: 200px">
+        <form class="form-inline my-2 my-lg-0" style="margin-left: 200px" action="search" method="post">
+            @csrf
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
-                   style="width: 400px">
-            <span class="btn btn-outline-success my-2 my-sm-0" type="submit"> Search <span
-                    class=" glyphicon glyphicon-search"></span></span>/button>
+                   style="width: 400px" name="search">
+            <button type="submit" class="btn btn-outline-success my-2 my-sm-0"><span class=" glyphicon glyphicon-search">Search</span></button>
         </form>
         @if(\Illuminate\Support\Facades\Auth::check())
             <a href="#" style="margin-left: 170px" class="btn btn-dark">Cart<span

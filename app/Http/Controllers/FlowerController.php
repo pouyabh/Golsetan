@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Flower;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 
 class FlowerController extends Controller
@@ -65,4 +66,13 @@ class FlowerController extends Controller
         $flowers = Flower::latest()->get();
         return view('flowers_for_client', compact('flowers'));
     }
+
+    public function priceinfo($id)
+    {
+        $flowers = Flower::findOrFail($id);
+        $comments = Comment::all();
+//        dd($flowers);
+        return view('price_info', compact('flowers', 'comments'));
+    }
+
 }

@@ -14,13 +14,13 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4">
-                                <a href=""><img src="Styles/icons8-twitter.gif" class="img img-responsive"></a>
+                                <a href=""><img src="{{asset('Styles/icons8-twitter.gif')}}" class="img img-responsive"></a>
                             </div>
                             <div class="col-md-4">
-                                <a href=""><img src="Styles/icons8-instagram.gif" class="img img-responsive"></a>
+                                <a href=""><img src="{{asset('Styles/icons8-instagram.gif')}}" class="img img-responsive"></a>
                             </div>
                             <div class="col-md-4">
-                                <a href=""><img src="Styles/icons8-facebook-480.png" class="img img-responsive"></a>
+                                <a href=""><img src="{{asset('Styles/icons8-facebook-480.png')}}" class="img img-responsive"></a>
 
                             </div>
                             <h3 style="font-family: fantasy;text-align: center">

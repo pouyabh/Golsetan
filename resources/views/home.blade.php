@@ -10,6 +10,12 @@
 <body>
 @extends("master")
 @section("content")
+{{--    <div class="panel-info">--}}
+{{--        @foreach($data as $d)--}}
+{{--            <div class="panel-heading">{{$d->name}}</div>--}}
+{{--            <div class="panel-body">{{$d->price}}</div>--}}
+{{--        @endforeach--}}
+{{--    </div>--}}
     <div id="demo" class="carousel slide" data-ride="carousel">
 
         <!-- Indicators -->
